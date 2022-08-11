@@ -13,9 +13,10 @@ export default class Character implements Fighter {
   private _defense: number;
   private _dexterity: number;
   private _energy: Energy;
+  private _name: string;
 
-  constructor(private name: string) {
-    this.name = 'Tchapimyra';
+  constructor(name: string) {
+    this._name = name;
     this._dexterity = getRandomInt(1, 10);
     this._race = new Elf(name, this._dexterity);
     this._archetype = new Mage(name);
@@ -57,6 +58,10 @@ export default class Character implements Fighter {
       type_: this._archetype.energyType,
       amount: this._energy.amount,
     };
+  }
+
+  public get name(): string {
+    return this._name;
   }
 
   public receiveDamage(attackPoints: number): number {
