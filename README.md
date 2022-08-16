@@ -27,6 +27,8 @@ Desenvolvi as seguintes habilidades:
 
 ## 🧪 Verificando o que foi feito
 
+<br/>
+
 * No arquivo `/src/index.ts` é possível verificar cada variável com um `console.log`.
 
 
